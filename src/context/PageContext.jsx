@@ -10,7 +10,7 @@ const PageContextProvider = (props) => {
 
     const currency = "₹"
 
-    const backendUrl = "http://localhost:4000"
+    const backendUrl = "https://test-back-ohsd.vercel.app"
     const navigate = useNavigate();
 
     const [login, setLogin] = useState(false)
