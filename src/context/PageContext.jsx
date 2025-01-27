@@ -10,7 +10,7 @@ const PageContextProvider = (props) => {
 
     const currency = "₹"
 
-    const backendUrl = "https://test-back-1-1y0f.onrender.com"
+    const backendUrl = "https://test-back-0aar.onrender.com"
     const navigate = useNavigate();
 
     const [login, setLogin] = useState(false)
