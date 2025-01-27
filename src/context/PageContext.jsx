@@ -10,7 +10,7 @@ const PageContextProvider = (props) => {
 
     const currency = "₹"
 
-    const backendUrl = "https://test-back-ohsd.vercel.app"
+    const backendUrl = "https://test-back-1-33ej.onrender.com"
     const navigate = useNavigate();
 
     const [login, setLogin] = useState(false)
