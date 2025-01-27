@@ -10,6 +10,7 @@ const PageContextProvider = (props) => {
 
     const currency = "₹"
 
+  
     const backendUrl = "https://test-back-0aar.onrender.com"
     const navigate = useNavigate();
 
@@ -35,7 +36,7 @@ const PageContextProvider = (props) => {
         try {
             const branchName = localStorage.getItem("branchName");
             // console.log(branchName)
-            const response = await axios.post(backendUrl + "/api/bankAcc/getbankinfo", { branchName })
+            const response = await axios.post(backendUrl + "/api/bankAcc/getbankinfo", { branchName },{withCredentials:true})
             // console.log(response)
             if (response.data.success)
                 await setBranchInfo(response.data.branchInfo)
@@ -52,7 +53,7 @@ const PageContextProvider = (props) => {
 
     const newOrder = async () => {
         try {
-            const response = await axios.post(backendUrl + "/api/order/new", { order })
+            const response = await axios.post(backendUrl + "/api/order/new", { order },{withCredentials:true})
 
             if (response.data.success) {
                 toast.success("Order Placed Successfully")

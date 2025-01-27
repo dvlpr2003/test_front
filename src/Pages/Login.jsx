@@ -19,7 +19,7 @@ const Login = () => {
       const response = await axios.post(backendUrl + "/api/bankAcc/login", {
         branchName,
         password
-      })
+      },{withCredentials:true})
       if (response.data.success) {
         await setLogin(response.data.success)
         await setBranchInfo(response.data.branchInfo)
